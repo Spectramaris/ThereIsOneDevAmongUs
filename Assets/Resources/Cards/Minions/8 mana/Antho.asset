@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: Antho
+  m_EditorClassIdentifier: 
+  name: Anthony, le Dev Ultime
+  sentence: Vous connaissez Schopenhauer ?
+  effect: "Saltation : divise l\u2019atk de tous les serviteurs du terrain par 2.
+    Gagne un montant d\u2019atk \xE9gal aux points d\u2019atk retir\xE9s aux autres
+    serviteurs pendant ce tour. Pendant le tour ou ce serviteur est jou\xE9, il peut
+    attaquer directement le joueur adverse. Il meurt apr\xE8s avoir attaqu\xE9. Dernier
+    soupir : Place Sabine dans votre main."
+  artwork: {fileID: 0}
+  manaCost: 8
+  rarity: 3
+  attack: 1000
+  defense: 0
+  type: 1
+  CarteEnMain: {fileID: 21300000, guid: ec25971f672477546b647548413ddfb7, type: 3}
+  CarteSurLePlateau: {fileID: 21300000, guid: e625833ebe23a9749890522ebd4e3c63, type: 3}

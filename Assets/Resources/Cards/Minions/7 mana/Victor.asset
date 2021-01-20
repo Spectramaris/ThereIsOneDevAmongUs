@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: Victor
+  m_EditorClassIdentifier: 
+  name: Victor, le sommeil profond
+  sentence: Laissez-moi dormir !
+  effect: "Ne peut pas attaquer pendant le tour o\xF9 cette carte est jou\xE9e, ni
+    celui d\u2019apr\xE8s. Le premier tour ou ce serviteur peut attaquer, lui donne
+    +2000atk."
+  artwork: {fileID: 0}
+  manaCost: 7
+  rarity: 1
+  attack: 2000
+  defense: 3000
+  type: 0
+  CarteEnMain: {fileID: 0}
+  CarteSurLePlateau: {fileID: 21300000, guid: ebf703120823b834081ba69a5f0b8aac, type: 3}

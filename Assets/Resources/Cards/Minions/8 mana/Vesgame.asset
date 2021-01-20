@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: Vesgame
+  m_EditorClassIdentifier: 
+  name: "Vesgame, l\u2019ic\xF4ne"
+  sentence: "Je pr\xE9f\xE8re la 2D"
+  effect: "Saltation: Donne +500 atk/+500 def \xE0 tous les serviteurs de type dev
+    sur votre plateau, dans votre main et dans votre deck."
+  artwork: {fileID: 0}
+  manaCost: 8
+  rarity: 3
+  attack: 2500
+  defense: 2000
+  type: 5
+  CarteEnMain: {fileID: 21300000, guid: 2b91d4fffe7cf05409048f7aa10b2c17, type: 3}
+  CarteSurLePlateau: {fileID: 21300000, guid: b62628a9c0df11043a448893ac394a86, type: 3}

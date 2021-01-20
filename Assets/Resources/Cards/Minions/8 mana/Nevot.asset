@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: Nevot
+  m_EditorClassIdentifier: 
+  name: Nevot, masterbrain
+  sentence: "\"Cette slide servait juste \xE0 garder votre attention... ou pas.\""
+  effect: "Saltation: Place 3 cartes \"Slide douteuse\" dans le deck de votre adversaire.
+    Chaque fois qu'il en pioche une, conf\xE8re acculation \xE0 un de ses serviteurs
+    (choisit de mani\xE8re al\xE9atoire)"
+  artwork: {fileID: 0}
+  manaCost: 8
+  attack: 2900
+  defense: 1300
+  rarity: 2
+  type: 5

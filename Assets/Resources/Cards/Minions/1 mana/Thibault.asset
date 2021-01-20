@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: Thibault
+  m_EditorClassIdentifier: 
+  name: Thibault, chara designeur efficace
+  sentence: "J'ai apport\xE9 le petit dej"
+  effect: "Saltation: Ajoute une copie d\u2019un serviteur du deck de votre adversaire
+    dans votre main"
+  artwork: {fileID: 0}
+  manaCost: 1
+  rarity: 1
+  attack: 100
+  defense: 700
+  type: 0
+  CarteEnMain: {fileID: 21300000, guid: a7df85823199a21439f0c214846cba98, type: 3}
+  CarteSurLePlateau: {fileID: 21300000, guid: 6f3683d9c6f5ae049964d415379a9133, type: 3}

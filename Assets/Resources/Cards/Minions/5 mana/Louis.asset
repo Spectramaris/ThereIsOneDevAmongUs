@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: Louis
+  m_EditorClassIdentifier: 
+  name: "Louis, le gardien de la biblioth\xE8que"
+  sentence: "On cherche \xE0 r\xE9tablir... la s\xE9rendipit\xE9 !"
+  effect: "Saltation: Ajoute une carte de terrain \u201CLibragora, la biblioth\xE8que
+    sacr\xE9e\u201D dans votre main. Pendant ce tour, elle co\xFBte (0) cristal de
+    mana. Tant que la carte \u201CLibragora, la biblioth\xE8que sacr\xE9e\u201D est
+    activ\xE9e, \u201CLouis, le gardien de la biblioth\xE8que\u201D a +1500 atk/+1500
+    def"
+  artwork: {fileID: 0}
+  manaCost: 5
+  rarity: 2
+  attack: 1250
+  defense: 1250
+  type: 0
+  CarteEnMain: {fileID: 0}
+  CarteSurLePlateau: {fileID: 21300000, guid: d6bd070f993d55041a7472f7fe256ac3, type: 3}

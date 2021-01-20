@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: Raie d'M.B
+  m_EditorClassIdentifier: 
+  name: Raie d'M.B
+  sentence: Bruit de plombier
+  effect: "Effet Flip: Ajoute une carte \u201Combre de M.B\u201D dans votre deck"
+  artwork: {fileID: 0}
+  manaCost: 2
+  rarity: 0
+  attack: 250
+  defense: 700
+  type: 5
+  CarteEnMain: {fileID: 0}
+  CarteSurLePlateau: {fileID: 21300000, guid: 56b6650e9c435314192ac260cac5bce1, type: 3}

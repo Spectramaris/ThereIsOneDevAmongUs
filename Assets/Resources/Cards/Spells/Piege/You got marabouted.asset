@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef94f1cda9363b747813e9cdabcf4dd9, type: 3}
+  m_Name: You got marabouted
+  m_EditorClassIdentifier: 
+  name: You got marabouted
+  sentence: 
+  effect: "Activable uniquement quand un serviteur adverse attaque un des votre,
+    et que votre adversaire poss\xE8de plus d\u2019un serviteur sur son terrain.
+    Redirige l\u2019attaque du serviteur attaquant sur un des serviteurs adjacents
+    \xE0 ce dernier (le joueur adverse ne subit alors aucun d\xE9g\xE2t)"
+  artwork: {fileID: 0}
+  manaCost: 3
+  rarity: 2
+  type: 1

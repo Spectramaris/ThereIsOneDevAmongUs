@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: Valentin
+  m_EditorClassIdentifier: 
+  name: "Valentin, le try harder de l\u2019extr\xEAme"
+  sentence: "A nos femmes, \xE0 nos chevaux..."
+  effect: "Saltation: Invoque un serviteur al\xE9atoire de chaque deck en position
+    d\u2019attaque. Les deux combattent."
+  artwork: {fileID: 0}
+  manaCost: 5
+  rarity: 1
+  attack: 2050
+  defense: 1000
+  type: 7
+  CarteEnMain: {fileID: 0}
+  CarteSurLePlateau: {fileID: 21300000, guid: da400a90de095a148b02c33f3d5b8399, type: 3}

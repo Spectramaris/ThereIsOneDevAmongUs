@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: "Th\xE9o"
+  m_EditorClassIdentifier: 
+  name: "Th\xE9o, l'Empereur P.O"
+  sentence: "Yo, il te reste des choses \xE0 faire ? "
+  effect: "Saltation : vous choisissez un type de serviteur. Invoque depuis votre
+    deck un serviteur al\xE9atoire du type choisis. Il peut attaquer directement
+    (serviteurs adverses uniquements) 2 fois, puis meurt \xE0 la fin du tour"
+  artwork: {fileID: 21300000, guid: ea557806817cd95448397b395ddcf43d, type: 3}
+  manaCost: 6
+  rarity: 2
+  attack: 1500
+  defense: 2150
+  type: 3
+  CarteEnMain: {fileID: 0}
+  CarteSurLePlateau: {fileID: 21300000, guid: 82b0728519bb73f4284b98a8ef881ee7, type: 3}

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: FZ
+  m_EditorClassIdentifier: 
+  name: "FZ, sportive f\xEAtarde"
+  sentence: "J'ai rammen\xE9 l'Absolut"
+  effect: "Effet Flip: 50% de chance de r\xE9duire le co\xFBt d'une carte al\xE9atoire
+    de votre main de (1) mana. 50% de chance d'ajouter une carte \"Jager\" al\xE9atoire
+    dans votre main"
+  artwork: {fileID: 0}
+  manaCost: 1
+  rarity: 1
+  attack: 200
+  defense: 400
+  type: 6
+  CarteEnMain: {fileID: 0}
+  CarteSurLePlateau: {fileID: 21300000, guid: 16b40565c623ac84ab24991bb06b7487, type: 3}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: Le Crapo
+  m_EditorClassIdentifier: 
+  name: Le Crapo
+  sentence: Croa
+  effect: "Effet flip: envoie cette carte dans le deck de votre adversaire. Les serviteurs
+    adverses ne peuvent pas (ou plus) mener d\u2019attaque pendant ce tour."
+  artwork: {fileID: 0}
+  manaCost: 3
+  rarity: 1
+  attack: 100
+  defense: 100
+  type: 0
+  CarteEnMain: {fileID: 0}
+  CarteSurLePlateau: {fileID: 21300000, guid: 0cabc17a0b18c674a851b48c4bf722e6, type: 3}

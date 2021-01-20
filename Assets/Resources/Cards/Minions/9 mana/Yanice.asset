@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: Yanice
+  m_EditorClassIdentifier: 
+  name: "Yanice \u201CThe Rock\u201D l\u2019acculeur"
+  sentence: Saltation Saltation Saltation
+  effect: "\"Saltation: Conf\xE8re acculation \xE0 TOUS les serviteurs sur le terrain.
+    Il est immunis\xE9 \xE0 cet effet, et ne peut pas \xEAtre attaqu\xE9 par un serviteur
+    touch\xE9 par cet effet. Gagne +500atk +500def par serviteurs d\xE9truits avec
+    cet effet. Dernier soupir : Misez sur pile ou face, puis lancez une pi\xE8ce.
+    Si vous gagnez, replace ce serviteur dans votre deck. Si vous perdez, inflige
+    1000 points de d\xE9g\xE2ts \xE0 vos LP \""
+  artwork: {fileID: 21300000, guid: d96b44495c792384da8bdde0bd2c39e0, type: 3}
+  manaCost: 9
+  rarity: 2
+  attack: 1500
+  defense: 1500
+  type: 6
+  CarteEnMain: {fileID: 0}
+  CarteSurLePlateau: {fileID: 21300000, guid: f1a20927f86852445bf165b8df9c81b7, type: 3}

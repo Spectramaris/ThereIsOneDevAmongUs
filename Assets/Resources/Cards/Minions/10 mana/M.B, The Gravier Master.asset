@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: M.B, The Gravier Master
+  m_EditorClassIdentifier: 
+  name: M.B, The Gravier Master
+  sentence: '*Random quote sur le master*'
+  effect: "Saltation: Annule les effets de tous les serviteurs du board et d\xE9truit
+    la carte terrain. Invoque deux profs al\xE9atoires en position de d\xE9fense.
+    Chaque tour ou il peut attaquer, a une chance sur deux de s'endormir (donc ne
+    pourra pas attaquer). Dernier soupir: place 2 cartes \"Gravier\" dans le deck
+    de votre adversaire"
+  artwork: {fileID: 0}
+  manaCost: 10
+  rarity: 3
+  attack: 4000
+  defense: 4000
+  type: 5
+  CarteEnMain: {fileID: 21300000, guid: 969b047d5119c8e4eaa17445d067a8f5, type: 3}
+  CarteSurLePlateau: {fileID: 21300000, guid: 94fc67955bec63e46ba376ff47b6846f, type: 3}

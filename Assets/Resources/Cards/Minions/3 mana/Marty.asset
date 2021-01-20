@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: Marty
+  m_EditorClassIdentifier: 
+  name: "Marty, expert en sc\xE9nario"
+  sentence: Vous avez vu les trois petits cochons?
+  effect: "Dernier soupir: Ajoute la carte \u201Csalle de l\u2019imagination\u201D
+    dans votre main"
+  artwork: {fileID: 0}
+  manaCost: 3
+  attack: 750
+  defense: 1500
+  rarity: 1
+  type: 5

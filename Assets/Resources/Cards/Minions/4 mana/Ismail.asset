@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: Ismail
+  m_EditorClassIdentifier: 
+  name: Manageuse en chef
+  sentence: "Ne vous inqui\xE9tez pas, ce QCM va bien se passer"
+  effect: "Effet flip: Vous piochez une carte. Si son co\xFBt est sup\xE9rieur \xE0
+    celle-ci, fait passer l\u2019atk de tous les serviteurs adverses \xE0 0 jusqu'au
+    d\xE9but de votre prochain tour"
+  artwork: {fileID: 0}
+  manaCost: 4
+  attack: 1000
+  defense: 1300
+  rarity: 2
+  type: 5

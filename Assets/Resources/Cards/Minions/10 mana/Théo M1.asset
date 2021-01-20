@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810d510a89dfac14a840cce6c01b265f, type: 3}
+  m_Name: "Th\xE9o M1"
+  m_EditorClassIdentifier: 
+  name: "Th\xE9o, graphiste supr\xEAme"
+  sentence: "\u201CTant que mon corps s\u2019est pas \xE9croul\xE9, ca veut dire
+    que je bosse pas assez\u201D"
+  effect: "Saltation : gagne *increvable* pendant les 3 prochains tours de votre
+    adversaire et Place 5 pilons de poulet kfc dans votre deck. Chaque fois que vous
+    en piochez un, vous rend 1000 LP. Si vous avez les 5 en main pendant que Th\xE9o
+    est toujours vivant sur le terrain, vous gagnez la partie. Cette carte ne peut
+    \xEAtre jou\xE9e qu'en position d'attaque face recto, et ne peut pas changer
+    sa position de combat."
+  artwork: {fileID: 0}
+  manaCost: 10
+  rarity: 3
+  attack: 0
+  defense: 0
+  type: 0
+  CarteEnMain: {fileID: 21300000, guid: c7f52bb93d308db458bdc9af9b2be371, type: 3}
+  CarteSurLePlateau: {fileID: 21300000, guid: 1602c72bf0c0ee340b31a704c4b5f5cb, type: 3}
