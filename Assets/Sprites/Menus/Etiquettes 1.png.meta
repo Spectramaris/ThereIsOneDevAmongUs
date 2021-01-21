@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: a6095d8ee991b4448811df6fdea2b64c
+guid: e43215465b622b5418172c7069bacc6f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5669034545775613281
-    second: menu etiquettes_0
+      213: -2723977890903468522
+    second: Etiquettes 1_0
   - first:
-      213: 8042188409906286533
-    second: menu etiquettes_1
+      213: -8234588014209435628
+    second: Etiquettes 1_1
   - first:
-      213: -7932853656744423549
-    second: menu etiquettes_2
+      213: 4639549339427451321
+    second: Etiquettes 1_2
   - first:
-      213: 8262199055835710592
-    second: menu etiquettes_3
+      213: 6738048570944608238
+    second: Etiquettes 1_3
   - first:
-      213: -4239539659157125501
-    second: menu etiquettes_4
+      213: -5548494246803769489
+    second: Etiquettes 1_4
   - first:
-      213: 8253625064646750175
-    second: menu etiquettes_5
+      213: -3052900337997728537
+    second: Etiquettes 1_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: menu etiquettes_0
+      name: Etiquettes 1_0
       rect:
         serializedVersion: 2
         x: 265
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9a60afcd1b8351b0800000000000000
-      internalID: -5669034545775613281
+      spriteID: 6165eac5a8c723ad0800000000000000
+      internalID: -2723977890903468522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu etiquettes_1
+      name: Etiquettes 1_1
       rect:
         serializedVersion: 2
         x: 1518
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cf4a3ddfb79b9f60800000000000000
-      internalID: 8042188409906286533
+      spriteID: 4187b5d64ddd8bd80800000000000000
+      internalID: -8234588014209435628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu etiquettes_2
+      name: Etiquettes 1_2
       rect:
         serializedVersion: 2
         x: 266
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38f079611a7d8e190800000000000000
-      internalID: -7932853656744423549
+      spriteID: 9b1b876fa8df26040800000000000000
+      internalID: 4639549339427451321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu etiquettes_3
+      name: Etiquettes 1_3
       rect:
         serializedVersion: 2
         x: 1516
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 084c7aa244a39a270800000000000000
-      internalID: 8262199055835710592
+      spriteID: ee75b7eb97b528d50800000000000000
+      internalID: 6738048570944608238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu etiquettes_4
+      name: Etiquettes 1_4
       rect:
         serializedVersion: 2
         x: 265
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38642cc54212a25c0800000000000000
-      internalID: -4239539659157125501
+      spriteID: f6776f431e9cff2b0800000000000000
+      internalID: -5548494246803769489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu etiquettes_5
+      name: Etiquettes 1_5
       rect:
         serializedVersion: 2
         x: 1515
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdfa7874444ca8270800000000000000
-      internalID: 8253625064646750175
+      spriteID: 7e4b9fa415be1a5d0800000000000000
+      internalID: -3052900337997728537
       vertices: []
       indices: 
       edges: []
