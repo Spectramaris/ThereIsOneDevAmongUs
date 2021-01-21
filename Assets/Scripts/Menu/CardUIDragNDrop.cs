@@ -39,7 +39,7 @@ public class CardUIDragNDrop : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
         if (onDeck.isValid)
         {
-            GameObject.Find("Menu principal").GetComponent<DecksManager>().AddCardToDeck(GetComponent<CardPrefabUI>().cardSO);
+            GameObject.Find("Managers").GetComponent<DecksManager>().AddCardToDeck(GetComponent<CardPrefabUI>().cardSO);
         }
     }
 

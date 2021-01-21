@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         // Récupération du Deck
-        var deckDic = GameObject.Find("Menu principal").GetComponent<DecksManager>().GetPlayDeck();
+        var deckDic = GameObject.Find("Managers").GetComponent<DecksManager>().GetPlayDeck();
         foreach (var pair in deckDic)
             for (int i = 0; i < pair.Value; i++)
                 deck.Add(pair.Key);
