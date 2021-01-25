@@ -17,7 +17,6 @@ public class HandCard : MonoBehaviour
         transform.GetChild(1).gameObject.SetActive(!playerOwner);
 
         sizeToOverride = Vector2.one;
-        Debug.Log(sizeToOverride);
     }
 
     private void LateUpdate()
@@ -54,5 +53,10 @@ public class HandCard : MonoBehaviour
     {
         overrideAnimation = true;
         manager.isAnimationPlaying = false;
+    }
+
+    public void PlayEnd()
+    {
+        manager.CreateBoardCardAnimationTrigger(gameObject, transform.GetChild(0).GetComponent<CardPrefab>().minionSO, true);
     }
 }

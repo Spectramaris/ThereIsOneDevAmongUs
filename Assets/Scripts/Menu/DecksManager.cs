@@ -42,7 +42,6 @@ public class DecksManager : MonoBehaviour
             decks[i] = new Dictionary<Card, int>();
 
             var deck = PlayerPrefs.GetString($"Deck{i}");
-            Debug.Log($"Deck {i + 1} : {deck}");
             for (int n = 0; n < deck.Length / 4; n++)
             {
                 string cardSS = deck.Substring(n * 4, 4);

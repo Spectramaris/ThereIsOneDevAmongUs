@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("Prefabs")]
     public GameObject handCardPrefab;
     public GameObject boardCardPrefab;
+    public AnimationClip AttackAnimation;
 
     [Header("Joueurs")]
     public Transform playerTransform;
@@ -120,10 +121,18 @@ public class GameManager : MonoBehaviour
         if (cardSO.manaCost > tempMana.actualMana)
             return false;
 
-        Debug.Log("On joue une carte et active l'animation");
+        cardGO.GetComponent<HandCard>().overrideAnimation = false;
         cardAnimator.SetTrigger("PlayingCard");
-
         tempMana.RemoveMana(cardSO.manaCost);
+
+        return true;
+    }
+
+    public void CreateBoardCardAnimationTrigger(GameObject cardGO, Minion cardSO, bool isPlayer)
+    {
+        var tempBoard = isPlayer ? board : aiBoard;
+        var tempBoardTransform = isPlayer ? playerBoardTransform : aiBoardTransform;
+        var tempHand = isPlayer ? hand : aiHand;
 
         var boardCard = Instantiate(boardCardPrefab);
         boardCard.GetComponent<BoardCardPrefab>().minionSO = cardSO;
@@ -137,8 +146,6 @@ public class GameManager : MonoBehaviour
         Destroy(cardGO);
         RefreshHandPlacement(isPlayer);
         RefreshBoardPlacement(isPlayer);
-
-        return true;
     }
 
     public void RefreshBoardPlacement(bool isPlayer)
@@ -242,8 +249,6 @@ public class GameManager : MonoBehaviour
 
         int cardRandom = Random.Range(0, tempDeck.Count);
         CreateHandCard(tempDeck[cardRandom], isPlayer);
-
-        Debug.Log($"Il reste {tempDeck.Count} cartes dans le deck");
     }
 
     public void CreateHandCard(Card cardSO, bool isPlayer)
@@ -283,7 +288,6 @@ public class GameManager : MonoBehaviour
     //---Gestion du chronomètre---//
     private IEnumerator Chronometre()
     {
-        Debug.Log("Debut Chronometre");
         float temps = 0;
 
         TextChronometre.text = "60";
@@ -297,14 +301,11 @@ public class GameManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        Debug.Log("End Chronometre");
-
         NextTurn();
     }
 
     public void SkipTurn()
     {
-        Debug.Log("On skip le tour");
         if (chronometre == null) return;
 
         StopCoroutine(chronometre);
@@ -313,7 +314,6 @@ public class GameManager : MonoBehaviour
 
     private void NextTurn()
     {
-        Debug.Log("On lance NextTurn()");
         playerTurn = !playerTurn;
         DrawCard(playerTurn);
 

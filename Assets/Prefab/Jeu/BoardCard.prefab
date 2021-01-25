@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: -9130209172313965752}
   - component: {fileID: 1795772327373964422}
   - component: {fileID: -100470659861059986}
+  - component: {fileID: 2319317941605440736}
   m_Layer: 0
   m_Name: BoardCard
   m_TagString: Untagged
@@ -495,6 +496,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16.061974, y: 16.65095}
   m_EdgeRadius: 0
+--- !u!95 &2319317941605440736
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386015067979105684}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3e3b0b1dee638441a63c624492984db, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7603847645224882391
 GameObject:
   m_ObjectHideFlags: 0

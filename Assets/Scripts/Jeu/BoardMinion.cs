@@ -11,8 +11,10 @@ public class BoardMinion : MonoBehaviour
     public int def { get; set; }
     public EveryTypes.CardType type { get; set; }
     public bool playerOwner { get; set; }
+
     private EveryTypes.BoardMode _actualMode;
     private bool buttonsDestroyed = false;
+    private Animator animator; 
 
     public EveryTypes.BoardMode ActualMode
     {
@@ -23,7 +25,7 @@ public class BoardMinion : MonoBehaviour
                 _actualMode = value;
                 canChangeMode = false;
 
-                transform.Rotate(0, 0, value == EveryTypes.BoardMode.Attaque ? 90 : -90);
+                animator.SetBool("Defense", value == EveryTypes.BoardMode.Defense ? true : false);
             }
         }
     }
@@ -33,6 +35,11 @@ public class BoardMinion : MonoBehaviour
     private bool canChangeMode = true;
     private bool canAttack = false;
     private bool attacking = false;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void Start()
     {
@@ -44,27 +51,34 @@ public class BoardMinion : MonoBehaviour
 
     private void Update()
     {
-        if (boutons == null) return;
-
-        if (Input.GetMouseButtonDown(0) && buttonsDestroyed == true)
-            Destroy(boutons.gameObject);
-
-        if(attacking && Input.GetMouseButtonDown(1))
+        if (attacking && Input.GetMouseButton(1))
         {
             canAttack = true;
             attacking = false;
             GameObject.Find("GameManager").GetComponent<GameManager>().AvortAttackingCard();
+            animator.SetBool("PrepareAttacking", false);
         }
+
+        if (boutons == null) return;
+
+        if (Input.GetMouseButtonDown(0) && buttonsDestroyed == true)
+            Destroy(boutons.gameObject);
     }
 
     public void StartAttack()
     {
+        animator.SetBool("PrepareAttacking", true);
+
         canAttack = false;
-        canChangeMode = false;
         attacking = true;
     }
 
-    public void HasAttacked() => attacking = false;
+    public void HasAttacked()
+    {
+        animator.SetBool("PrepareAttacking", false);
+        attacking = false;
+        canChangeMode = false;
+    }
 
     private void OnMouseUp()
     {
