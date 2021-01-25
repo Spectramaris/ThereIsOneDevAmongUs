@@ -33,7 +33,7 @@ public class DecksManager : MonoBehaviour
         {
             GameObject newCard = Instantiate(UICardPrefab, cardContent.transform);
             newCard.name = card.name;
-            newCard.GetComponent<CardPrefabUI>().cardSO = card;
+            newCard.GetComponent<CardPrefabUI>().cardSO = (Minion)card;
         }
 
         // Chargement des decks déjà possédés par le joueur
@@ -70,7 +70,7 @@ public class DecksManager : MonoBehaviour
             GameObject newCard = Instantiate(deckPrefab, deckContent.transform);
             newCard.name = card.name;
             newCard.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "1";
-            newCard.GetComponent<CardPrefabUIResume>().cardSO = card;
+            newCard.GetComponent<CardPrefabUIResume>().minionSO = (Minion)card;
         }
 
         checkCardLock(card);
@@ -127,7 +127,7 @@ public class DecksManager : MonoBehaviour
         {
             Destroy(child.gameObject);
 
-            checkCardLock(child.GetComponent<CardPrefabUIResume>().cardSO);
+            checkCardLock(child.GetComponent<CardPrefabUIResume>().minionSO);
         }
 
         // Remplissage de l'affichage du deck
@@ -136,7 +136,7 @@ public class DecksManager : MonoBehaviour
             GameObject newCard = Instantiate(deckPrefab, deckContent.transform);
             newCard.name = pair.Key.name;
             newCard.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = pair.Value.ToString();
-            newCard.GetComponent<CardPrefabUIResume>().cardSO = pair.Key;
+            newCard.GetComponent<CardPrefabUIResume>().minionSO = (Minion) pair.Key;
 
             checkCardLock(pair.Key);
         }
