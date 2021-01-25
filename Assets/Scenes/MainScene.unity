@@ -118301,6 +118301,7 @@ MonoBehaviour:
   TextChronometre: {fileID: 807353773}
   hpJoueurText: {fileID: 453904700}
   hpAiText: {fileID: 862050404}
+  isAnimationPlaying: 0
 --- !u!4 &1733364000
 Transform:
   m_ObjectHideFlags: 0

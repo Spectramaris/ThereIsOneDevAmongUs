@@ -15,9 +15,13 @@ public class CardPrefab : MonoBehaviour
     public TextMeshPro typeText;
     public TextMeshPro effectText;
 
-    // Start is called before the first frame update
+    public bool isPlayer;
+
     void Start()
     {
+        GetComponent<SpriteRenderer>().sprite = minionSO.CarteEnMain;
+        transform.parent.GetComponent<Animator>().SetBool("IsPlayer", isPlayer);
+
         manaCostText.text   = minionSO.manaCost.ToString();
         atkText.text        = minionSO.attack.ToString();
         defText.text        = minionSO.defense.ToString();

@@ -39,7 +39,7 @@ public class CardUIResumeDragNDrop : MonoBehaviour, IPointerDownHandler, IPointe
 
         if (!onDeck.isValid)
         {
-            GameObject.Find("Menu principal").GetComponent<DecksManager>().RemoveCardToDeck(GetComponent<CardPrefabUIResume>().cardSO);
+            GameObject.Find("Managers").GetComponent<DecksManager>().RemoveCardToDeck(GetComponent<CardPrefabUIResume>().minionSO);
         }
     }
 

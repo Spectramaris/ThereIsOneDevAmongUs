@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     private List<GameObject> aiBoard = new List<GameObject>();
 
     [HideInInspector] public bool playerTurn { get; set; } = true;
+    [HideInInspector] public bool isAnimationPlaying = false;
     private Coroutine  chronometre;
     private GameObject playerAttacking;
 
@@ -63,17 +64,32 @@ public class GameManager : MonoBehaviour
         // Pour le bien du jeu, l'IA commence avec le même deck que le joueur
         aiDeck = new List<Card>(deck);
 
+        StartCoroutine(RemplirMainJoueurs());
+
+        chronometre = StartCoroutine(Chronometre());
+    }
+
+    private IEnumerator RemplirMainJoueurs()
+    {
         // Création des cartes de départ
         for (int i = 0; i < startingCardsNumber; i++)
         {
             int cardRandom = Random.Range(0, deck.Count);
             int aiCardRandom = Random.Range(0, deck.Count);
 
+
             CreateHandCard(deck[cardRandom], true);
             CreateHandCard(aiDeck[aiCardRandom], false);
+
+            isAnimationPlaying = true;
+
+            RefreshHandPlacement(true);
+            RefreshHandPlacement(false);
+
+            while (isAnimationPlaying)
+                yield return new WaitForEndOfFrame();
         }
 
-        chronometre = StartCoroutine(Chronometre());
     }
 
     //---Gestion des joueurs---//
@@ -92,7 +108,7 @@ public class GameManager : MonoBehaviour
     }
 
     //---Gestion du terrain---//
-    public bool CreateBoardCard(GameObject cardGO, Minion cardSO, bool isPlayer)
+    public bool CreateBoardCard(GameObject cardGO, Minion cardSO, Animator cardAnimator, bool isPlayer)
     {
         var tempBoard          = isPlayer ? board                : aiBoard;
         var tempBoardTransform = isPlayer ? playerBoardTransform : aiBoardTransform;
@@ -103,6 +119,9 @@ public class GameManager : MonoBehaviour
             return false;
         if (cardSO.manaCost > tempMana.actualMana)
             return false;
+
+        Debug.Log("On joue une carte et active l'animation");
+        cardAnimator.SetTrigger("PlayingCard");
 
         tempMana.RemoveMana(cardSO.manaCost);
 
@@ -238,8 +257,8 @@ public class GameManager : MonoBehaviour
 
         var card = Instantiate(handCardPrefab);
         card.transform.GetChild(0).GetComponent<CardPrefab>().minionSO = (Minion)cardSO;
+        card.transform.GetChild(0).GetComponent<CardPrefab>().isPlayer = isPlayer;
         card.transform.SetParent(isPlayer ? playerTransform : aiTransform);
-        card.transform.localPosition = Vector2.zero;
         card.GetComponent<HandCard>().manager = this;
         card.GetComponent<HandCard>().playerOwner = isPlayer;
 
@@ -251,11 +270,12 @@ public class GameManager : MonoBehaviour
     public void RefreshHandPlacement(bool isPlayer)
     {
         var tempHand = isPlayer ? hand : aiHand;
+        var tempYpos = isPlayer ? playerTransform.position.y : aiTransform.position.y;
         int cardPosition = -(tempHand.Count * (HandCardWidth / 2)) + (HandCardWidth / 2);
 
         foreach (var card in tempHand)
         {
-            card.transform.position = new Vector2(cardPosition, card.transform.position.y);
+            card.GetComponent<HandCard>().positionToOverride = new Vector2(cardPosition, tempYpos);
             cardPosition += HandCardWidth;
         }
     }
@@ -263,6 +283,7 @@ public class GameManager : MonoBehaviour
     //---Gestion du chronomètre---//
     private IEnumerator Chronometre()
     {
+        Debug.Log("Debut Chronometre");
         float temps = 0;
 
         TextChronometre.text = "60";
@@ -276,11 +297,14 @@ public class GameManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        Debug.Log("End Chronometre");
+
         NextTurn();
     }
 
     public void SkipTurn()
     {
+        Debug.Log("On skip le tour");
         if (chronometre == null) return;
 
         StopCoroutine(chronometre);
@@ -289,6 +313,7 @@ public class GameManager : MonoBehaviour
 
     private void NextTurn()
     {
+        Debug.Log("On lance NextTurn()");
         playerTurn = !playerTurn;
         DrawCard(playerTurn);
 
@@ -307,8 +332,10 @@ public class GameManager : MonoBehaviour
 
             NextTurn();
         }
-
-        chronometre = StartCoroutine(Chronometre());
+        else
+        {
+            chronometre = StartCoroutine(Chronometre());
+        }
     }
 
     //---Gestion de la logique de l'IA---//
@@ -317,7 +344,7 @@ public class GameManager : MonoBehaviour
         var tempHand = new List<GameObject>(aiHand);
 
         foreach (var card in tempHand)
-            if(!CreateBoardCard(card, card.transform.GetChild(0).GetComponent<CardPrefab>().minionSO, false))
+            if(!CreateBoardCard(card, card.transform.GetChild(0).GetComponent<CardPrefab>().minionSO, card.GetComponent<Animator>(), false))
                 break;
     }
 

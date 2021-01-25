@@ -21,5 +21,5 @@ MonoBehaviour:
   attack: 450
   defense: 450
   type: 2
-  CarteEnMain: {fileID: 0}
-  CarteSurLePlateau: {fileID: 21300000, guid: 87d666963acb84741a01e07886d7afe7, type: 3}
+  CarteEnMain: {fileID: 21300000, guid: 28a148d83a337164983ebe5121a89934, type: 3}
+  CarteSurLePlateau: {fileID: 21300000, guid: 3a7c7b0a6ebe73c43a1de9e348cc536f, type: 3}
