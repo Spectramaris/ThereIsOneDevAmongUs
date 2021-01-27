@@ -30,7 +30,8 @@ public class HandCard : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (manager.playerTurn) manager.CreateBoardCard(gameObject, transform.GetChild(0).GetComponent<CardPrefab>().minionSO, GetComponent<Animator>(),true);
+        if (!playerOwner) return;
+        if (manager.playerTurn) manager.CreateBoardCard(gameObject, transform.GetChild(0).GetComponent<CardPrefab>().minionSO, GetComponent<Animator>(), true);
     }
 
     private void OnMouseEnter()
@@ -57,6 +58,6 @@ public class HandCard : MonoBehaviour
 
     public void PlayEnd()
     {
-        manager.CreateBoardCardAnimationTrigger(gameObject, transform.GetChild(0).GetComponent<CardPrefab>().minionSO, true);
+        manager.CreateBoardCardAnimationTrigger(gameObject, transform.GetChild(0).GetComponent<CardPrefab>().minionSO, playerOwner);
     }
 }

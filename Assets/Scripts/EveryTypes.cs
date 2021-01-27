@@ -4,6 +4,8 @@ using UnityEngine;
 
 public static class EveryTypes
 {
+    public static bool GameIsLaunched { get; set; }
+
     public enum Rarity
     {
         Commune, Rare, Epique, Legendaire

@@ -21366,8 +21366,8 @@ RectTransform:
   m_Father: {fileID: 1690185758}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.93, y: 0.02}
-  m_AnchorMax: {x: 0.99, y: 0.12}
+  m_AnchorMin: {x: 0.85800004, y: 0.020000001}
+  m_AnchorMax: {x: 0.98200005, y: 0.089379326}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -21444,7 +21444,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3537699088cad0c4492cb1b77f414927, type: 3}
+  m_Sprite: {fileID: -5667216790319853657, guid: 47597963334e9d34db46b98635564a6c,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -118301,6 +118302,8 @@ MonoBehaviour:
   TextChronometre: {fileID: 807353773}
   hpJoueurText: {fileID: 453904700}
   hpAiText: {fileID: 862050404}
+  AttaqueAnimation: {fileID: 7400000, guid: 6ba928dcbf6e7bd458d47cf305090975, type: 2}
+  RetourAnimation: {fileID: 7400000, guid: 66643fc90b30c16478bef13009c707c6, type: 2}
   isAnimationPlaying: 0
 --- !u!4 &1733364000
 Transform:

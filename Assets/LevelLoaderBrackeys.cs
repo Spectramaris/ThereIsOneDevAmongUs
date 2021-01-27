@@ -13,7 +13,6 @@ public class LevelLoaderBrackeys : MonoBehaviour
     public void LoadLevel(int sceneIndex)
     {
         StartCoroutine(LoadAsynchronously(sceneIndex));
-
     }
 
     IEnumerator LoadAsynchronously (int sceneIndex)

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [Header("Prefabs")]
     public GameObject handCardPrefab;
     public GameObject boardCardPrefab;
-    public AnimationClip AttackAnimation;
 
     [Header("Joueurs")]
     public Transform playerTransform;
@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     public TextMeshPro TextChronometre;
     public TextMeshPro hpJoueurText;
     public TextMeshPro hpAiText;
+
+    [Header("Animations")]
+    public AnimationClip AttaqueAnimation;
+    public AnimationClip RetourAnimation;
 
     // Joueur 
     private int hp = 10000;
@@ -42,6 +46,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public bool isAnimationPlaying = false;
     private Coroutine  chronometre;
     private GameObject playerAttacking;
+    private GameObject playerDefending;
 
     
     //---RULES---//
@@ -100,11 +105,17 @@ public class GameManager : MonoBehaviour
         {
             aiHp += value;
             hpAiText.text = $"{aiHp}";
+
+            if (aiHp < 0)
+                SceneManager.LoadScene(2);
         }
         else
         {
             hp += value;
             hpJoueurText.text = $"{hp}";
+
+            if (hp < 0)
+                SceneManager.LoadScene(3);
         }
     }
 
@@ -137,7 +148,7 @@ public class GameManager : MonoBehaviour
         var boardCard = Instantiate(boardCardPrefab);
         boardCard.GetComponent<BoardCardPrefab>().minionSO = cardSO;
         boardCard.GetComponent<BoardMinion>().minionSO = cardSO;
-        boardCard.GetComponent<BoardMinion>().playerOwner = playerTurn;
+        boardCard.GetComponent<BoardMinion>().playerOwner = isPlayer;
 
         boardCard.transform.position = new Vector2(0, tempBoardTransform.position.y);
         tempHand.Remove(cardGO);
@@ -189,18 +200,20 @@ public class GameManager : MonoBehaviour
     {
         if (playerAttacking == null) return;
 
+        playerDefending = card;
+
         int attaquantStat = playerAttacking.GetComponent<BoardMinion>().atk;
         var ennemyBoard = playerTurn ? aiBoard : board;
-        var allyBoard = playerAttacking ? board : aiBoard;
+        var allyBoard = playerTurn ? board : aiBoard;
         BoardMinion defenseur = card.GetComponent<BoardMinion>();
         int defenseurStat = defenseur.ActualMode == EveryTypes.BoardMode.Attaque ? defenseur.atk : defenseur.def;
 
         if (attaquantStat > defenseurStat)
         {
-            ennemyBoard.Remove(defenseur.gameObject);
-            Destroy(defenseur.gameObject);
             if (defenseur.ActualMode == EveryTypes.BoardMode.Attaque)
                 SubirDegats(defenseurStat - attaquantStat, true);
+            ennemyBoard.Remove(defenseur.gameObject);
+            Destroy(defenseur.gameObject);
         }
         else if (attaquantStat < defenseurStat)
         {
@@ -225,6 +238,7 @@ public class GameManager : MonoBehaviour
         playerAttacking.GetComponent<BoardMinion>().HasAttacked();
         playerAttacking = null;
     }
+
 
     //---Gestion de la main---//
     public void DrawCard(bool isPlayer)

@@ -13,6 +13,7 @@ public class DecksManager : MonoBehaviour
     public GameObject deckContent;
     public GameObject deckPrefab;
     public TextMeshProUGUI maxCardstxt;
+    public LevelLoaderBrackeys lvlLoader;
 
     private List<Card> cards;
     private Dictionary<Card, int>[] decks = new Dictionary<Card, int>[5];
@@ -194,6 +195,24 @@ public class DecksManager : MonoBehaviour
         cardGO.GetComponent<Image>().color = maxReached ? Color.red : Color.white;
     }
 
-    public void SelectPlayDeck(int i) => deckSelectedForGame = i;
+    public void SelectPlayDeck(int i)
+    {
+        if (GetCountForDeck(i) != 30) return;
+
+        deckSelectedForGame = i;
+        lvlLoader.LoadLevel(1);
+    }
+
     public Dictionary<Card, int> GetPlayDeck() => decks[deckSelectedForGame];
+
+    public int GetCountForDeck(int deckNum)
+    {
+        int tot = 0;
+        foreach(var pair in decks[deckNum])
+        {
+            tot += pair.Value;
+        }
+
+        return tot;
+    }
 }
